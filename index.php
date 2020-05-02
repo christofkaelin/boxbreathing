@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
 		<title>Boxbreathing</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Boxbreathing is a timed breathing technique that consists of four consecutive intervals. Boxbreathing may have a positive impact on your mood as well as maintaining focus.">
+		<meta name="author" content="Christof Kälin">
+		<meta name="robots" content="index,follow">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto:wght@400;900&display=swap">
 		<link rel="shortcut icon" href="/favicon.ico">
@@ -63,14 +66,14 @@
 				border-bottom: 1em solid #eee;
 			}
 
-			article {
+			.slide {
 				height: 50%;
 			}
 
 			h1,
 			h2,
 			h3,
-			h4
+			h4,
 			h5 {
 				font-family: 'Bad Script', serif;
 			}
@@ -89,6 +92,7 @@
 
 			#switch::after {
 				position: absolute;
+				font-size: .8em;
 				top: 0;
 				left: 0;
 				width: 50%;
@@ -129,6 +133,12 @@
 				right: 0.8em;
 				bottom: 3em;
 				color: #666;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
 			}
 
 			.circle {
@@ -212,7 +222,7 @@
 				width: 70%;
 				margin-left:auto;
 				margin-right:auto;
-				padding: 2em 0em;
+				padding: 2em 0;
 			}
 
 			.about-link {
@@ -233,10 +243,16 @@
 		</style>
 	</head>
 	<body>
-	<input type="checkbox" id="switch">
+	<input type="checkbox" id="switch"
+        <?php
+            if (isset($_GET["nightmode"])){
+                if ($_GET["nightmode"] == "on") {
+                    echo ("checked");
+                }
+            } ?>>
 	<label for="switch">Nightmode?</label>
 	<main>
-		<article class="center">
+		<div class="center slide">
 			<div class="center circle">
 				<div class="lead">
 					<div class="strings">
@@ -256,18 +272,18 @@
 					</div>
 				</div>
 			</div>
-		</article>
-		<article id="about">
+		</div>
+		<div id="about" class="slide">
 			<h1>What is boxbreathing?</h1>
-			<p>Boxbreathing is a simple breathing technique: breathe in for four seconds, hold breath, breathe out for four seconds, hold and repeat. Apparently, this technique helps to calm down and may aid in improving focus. Detailed information can be found on <a href="https://www.medicalnewstoday.com/articles/321805" target="_blank">Medical News Today</a>, medically reviewed by <a href="https://rm.edu/rmu-bios/timothy-legg/" target="_blank">Dr. Timothy J. Legg</a>.</p>
+			<p>Boxbreathing is a timed breathing technique that consists of four consecutive intervals: Breathe in, holding your breath, breathe out, and hold again. Each of those segments is supposed to last for around 4 seconds in order to have a positive impact on your mood as well as maintaining focus. Detailed information can be found on <a href="https://www.medicalnewstoday.com/articles/321805" target="_blank">Medical News Today</a>, medically reviewed by <a href="https://rm.edu/rmu-bios/timothy-legg/" target="_blank">Dr. Timothy J. Legg</a>.</p>
 			<h2>About this page</h2>
-			<p>This website is based on <a href="https://gfycat.com/finishedobesedormouse" target="_blank">this gfycat</a> by <a href="https://www.healthline.com/health/box-breathing" target="_blank">Healthline</a>. The page uses only HTML and CSS and the source code can be found on <a href="https://github.com/christofkaelin/boxbreathing" target="_blank">GitHub</a>. <a href="https://www.chenhuijing.com/blog/can-you-make-a-countdown-timer-in-pure-css/" target="_blank">This article</a> on CSS countdown by Chen Hui Jing as well as <a href="https://dev.wgao19.cc/sun-moon-blending-mode/" target="_blank">this article</a> on a pure CSS night mode solution along with <a href="https://codepen.io/wgao19/pen/vMzOgQ" target="_blank">this codepen</a> by Wei Gao helped a lot with the development. Thanks a lot for these great ressources :-)<br>And at last but not least, the icons used are made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons" target="_blank">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">flaticon.com</a>.</p>
+			<p>This website is based on <a href="https://gfycat.com/finishedobesedormouse" target="_blank">this gfycat</a> by <a href="https://www.healthline.com/health/box-breathing" target="_blank">Healthline</a>. For the purpose of simplicity, only HTML and CSS 3 were used to create this site. During the realisation, I found <a href="https://www.chenhuijing.com/blog/can-you-make-a-countdown-timer-in-pure-css/" target="_blank">this article</a> on CSS countdowns by Chen Hui Jing exceedingly helpful. Along with <a href="https://dev.wgao19.cc/sun-moon-blending-mode/" target="_blank">Wei Gao's</a> solution for a pure night mode in form of a <a href="https://codepen.io/wgao19/pen/vMzOgQ" target="_blank">codepen</a>, I was able to avoid Javascript entirely.<br>Last but not least, the icons in use were provided by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons" target="_blank">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">flaticon.com</a>.<br>Thank you all for sharing your knowledge/icons. The source code is publicly available on <a href="https://github.com/christofkaelin/boxbreathing" target="_blank">GitHub</a></p>
 			<p>boxbreathing.info is created by <a href="https://www.christofkaelin.ch/" target="_blank">Christof Kälin</a> – if you have any questions or suggestions, make sure to stop by and let me know.</p>
-			<h3>No liability for completeness and accuracy </h3>
-			<p>All information published on the website is made available by <a href="https://www.boxbreathing.info">boxbreathing.info</a> and is for personal use and information purposes only; it may be changed at any time and without prior notice. boxbreathing.info assumes no liability (neither expressly nor impliedly) for the accuracy, completeness and timeliness of the information published on boxbreathing.info; even though all due care was taken during the collection of sources regarded as trustworthy.</p>
+			<h3>Liability</h3>
+			<p>All information published on the website is made available by <a href="https://www.boxbreathing.info">boxbreathing.info</a> and is for personal use and information purposes only, it may be changed at any time and without prior notice. boxbreathing.info assumes no liability (neither expressly nor impliedly) for the accuracy, completeness and timeliness of the information published on boxbreathing.info; even though all due care was taken during the collection of sources regarded as trustworthy.</p>
 			<h3>Links</h3>
-			<p>Certain links on boxbreathing.info lead to third-party websites, which are completely beyond the control of boxbreathing.info. Accordingly, boxbreathing.info assumes no responsibility for the accuracy, completeness and legality of the contents of such websites or for any offers and services contained therein.</p>
-		</article>
+			<p>The majority of links on boxbreathing.info lead to third-party websites, which are beyond the control of boxbreathing.info. Accordingly, boxbreathing.info assumes no responsibility for the accuracy, completeness and legality of the contents of such websites or for any offers and services contained therein.</p>
+		</div>
 	</main>
 	<a class="about-link" href="#about">What is<br>boxbreathing?</a>
 	</body>
