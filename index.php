@@ -8,7 +8,7 @@
 		<meta name="robots" content="index,follow">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto:wght@400;900&display=swap">
-		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="shortcut icon" href="favicon/favicon.ico">
 		<link rel="icon" sizes="16x16 32x32 64x64" href="favicon/favicon.ico">
 		<link rel="icon" type="image/png" sizes="196x196" href="favicon/favicon-192.png">
 		<link rel="icon" type="image/png" sizes="160x160" href="favicon/favicon-160.png">
@@ -234,6 +234,7 @@
 				color: #666 !important;
 				text-decoration: none;
 				transition: transform .3s;
+                transform-origin: bottom left;
 			}
 
 			.about-link:hover {
